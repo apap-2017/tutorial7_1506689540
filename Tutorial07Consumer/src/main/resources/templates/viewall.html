@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <div th:replace="fragments/fragment :: title"></div>
+        <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" type="text/css"/>
+        <link href="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" type="text/css"/>
+    </head>
+    <body>
+        <h1>All Students</h1>
+    	
+       	<table id="myTable" class="display">
+       		<thead>
+       			<tr>
+       				<th>No</th>
+       				<th>NPM</th>
+       				<th>Nama</th>
+       				<th>GPA</th>
+       				<th>Cum laude</th>
+       				<th>Delete</th>
+       				<th>Update</th>
+       			</tr>
+       		</thead>
+       		<tbody>
+       			<tr th:each="student,iterationStatus: ${students}">
+					<td th:text="${iterationStatus.count}">No</td>
+					<td th:text="${student.npm}">Nama</td>
+					<td th:text="${student.name}">NPM</td>
+					<td th:text="${student.gpa}">Nama</td>
+					<td th:text="${student.npm}>='3.49' ? 'Cum laude': '-' ">NPM</td>
+					<td ><a th:href= "'/student/delete/'+${student.npm}">Delete</a></td>
+					<td ><a th:href= "'/student/update/'+${student.npm}">Update</a></td>
+				</tr>
+			</tbody>
+       	</table>
+    	<script>
+	    	$(document).ready( function () {
+	    	    $('#table_id').DataTable();
+	    	} );
+    	</script>
+    </body>
+</html>

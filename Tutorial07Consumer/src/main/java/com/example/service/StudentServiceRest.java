@@ -27,14 +27,13 @@ public class StudentServiceRest implements StudentService {
 
 	@Override
 	public CourseModel selectCourse(String id) {
-		log.info("REST - select all students");
 		return null;
 	}
 
 	@Override
 	public List<StudentModel> selectAllStudents() {
-		// TODO Auto-generated method stub
-		return null;
+		log.info("REST - select all students");
+		return studentDAO.selectAllStudents();
 	}
 
 	@Override

@@ -25,10 +25,6 @@ public class StudentServiceRest implements StudentService {
 		return studentDAO.selectStudent(npm);
 	}
 
-	@Override
-	public CourseModel selectCourse(String id) {
-		return null;
-	}
 
 	@Override
 	public List<StudentModel> selectAllStudents() {

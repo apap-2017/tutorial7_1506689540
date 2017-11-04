@@ -25,13 +25,6 @@ public class StudentServiceDatabase implements StudentService
         log.info ("select student with npm {}", npm);
         return studentMapper.selectStudent (npm);
     }
-    
-    @Override
-    public CourseModel selectCourse (String id)
-    {
-        log.info ("select course with id {}", id);
-        return studentMapper.selectCourse (id);
-    }
 
 
     @Override

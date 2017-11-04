@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.example.dao.StudentDAO;
+import com.example.model.CourseModel;
 import com.example.model.StudentModel;
 
 @Service
